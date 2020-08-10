@@ -4,10 +4,10 @@ const { json } = require('express');
 
 var config = { 
 
-    url: 'ldap://192.168.128.15:389',
-    baseDN: 'DC=aliancaenergia,DC=com,DC=br',
-    username: 'api@aliancaenergia.com.br',
-    password: 'vtTut1fM6L#'
+    url: 'ldap://ip:port',
+    baseDN: 'DC=,DC=,DC=',
+    username: 'user@domain.com',
+    password: 'pswd'
 
 }
 
@@ -17,7 +17,7 @@ module.exports = {
 
     index(req, res) {
 
-        var domain = '@aliancaenergia.com.br'
+        var domain = '@domain.com'
         var sAMAccountName = req.body.user;
         var userPrincipalName = req.body.user + domain;
         var password = req.body.password;
